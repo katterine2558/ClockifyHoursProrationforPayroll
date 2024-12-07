@@ -1,28 +1,82 @@
-# prorrateoClockify
-Herramienta cuyo objetivo es prorratear las horas trabajadas por todos los colaboradores dentro de un rango de tiempo establecido. La herramienta genera un reporte en donde cada fila es el registro total de las horas asociadas a un proyecto de cada colaborador.
-El reporte se guarda en Documentos. 
+⏱️ Clockify Hours Proration for Payroll
 
-Ejemplo de reporte:
+This application allows you to prorate Clockify time entries for each collaborator to facilitate payroll processing. The tool processes Clockify data, generating detailed reports for accurate payroll calculations.
+📂 Project Structure
 
-![image](https://github.com/pedeltasoftwares/prorrateoClockify/assets/144169025/981ab3ca-8a71-47b8-a19c-4b063fdecf89)
+    Prorrateo.py
+    Script for prorating the hours worked by each collaborator.
 
-* Columna 1: Identificación del colaborador. Tiene ancho de columna de 15px.
-* Columna 2: Identificación interna del proyecto. Tiene ancho de columna de 15px.
-* Columna 3: Fecha de inicio de reporte. Tiene ancho de columna de 10px. Formato dd-mm-aaaa
-* Columna 4: Fecha fin de reporte. Tiene ancho de columna de 10px. Formato dd-mm-aaaa
-* Columna 5: Prorrateo. Tiene ancho de columna de 5px.
-* Columna 6: Nombre del prorrateo. Después del guión bajo se añaden las tres primeras letras del mes al que corresponde el prorrateo.
+    f_generar_reporte.py
+    Script for generating detailed payroll reports.
 
-  
-**Explicación de herramienta**
+    run.py
+    Main script to execute the proration and reporting process.
 
-La herramienta tienes dos funciones principales:
-1. Generar reporte establecido un rango de fecha.
-2. Agregar colaborador en llegado caso de que haya ingreso a la empresa. El objetivo de esta funcionalidad es mantener la herramienta actualizada sin necesidad de recurrir a Excel que la alimente.
+    Directories:
+        _lib: Contains libraries or helper functions used in the scripts.
+        _images: Stores images related to the project (e.g., documentation or examples).
+        __pycache__: Compiled Python files.
 
-**CONSIDERACIONES**
+    requirements.txt
+    List of required Python dependencies.
 
-Para generar el reporte NO se debe tener instancias abiertas de MS Excel. De lo contrario, creará conflicto.
-En llegado caso de olvidar esta consideración, se debe cerrar inmediatamente la herramienta. Posteriormente, se debe abrir el Administrador de Tareas del computador y finalizar la tarea asociada a Microsoft Excel.
+    requirements.log
+    Log file of installed dependencies.
 
-Desarrollado por: KA
+🚀 Features
+
+    Prorate Clockify Hours:
+    Automatically divides work hours among collaborators for accurate payroll calculations.
+
+    Generate Reports:
+    Export detailed reports for payroll processing.
+
+    Easy Integration:
+    Scripts are customizable and easy to integrate with your current workflow.
+
+🔧 Prerequisites
+
+    Python 3.x
+
+    Dependencies:
+    Install required libraries:
+
+    pip install -r requirements.txt
+
+    Clockify API Key
+    Obtain your API key from your Clockify account settings.
+
+⚙️ How to Use
+
+    Configuration:
+        Update your API key and configuration parameters in Prorrateo.py and run.py.
+
+    Run the Main Script:
+
+python run.py
+
+Generate Report:
+Use f_generar_reporte.py to export the payroll report.
+
+    python f_generar_reporte.py
+
+📊 Output
+
+    Prorated Data:
+    CSV or Excel files with prorated hours per collaborator.
+
+    Reports:
+    Detailed payroll reports for easy processing.
+
+🔒 Security
+
+    API Key: Keep your Clockify API key secure.
+    Data Privacy: Ensure only authorized users access the scripts and generated reports.
+
+🤝 Contributing
+
+Contributions are welcome! Submit an issue or pull request to suggest improvements.
+
+📝 License
+
+This project is licensed under the MIT License.
